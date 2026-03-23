@@ -1,0 +1,5 @@
+Running: /usr/bin/python3.11 -m ml.image_model.colorize --dataset stl10 --epochs 50 --mixed-precision auto --limit 12000
+e 88, in _run_code
+  File "/mnt/d/University/AI/Yulia/ml-sandbox/ml/image_model/colorize.py", line 20, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

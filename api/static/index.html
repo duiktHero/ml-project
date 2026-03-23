@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Sandbox Control Room</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section class="hero">
+      <article class="hero-card">
+        <div class="eyebrow">ML Sandbox Control Room</div>
+        <h1>Веб-застосунок для живого огляду API</h1>
+        <p>
+          Тут можна не лише викликати endpoints для classify, colorize, stylize і benchmark,
+          а й дивитися останні prediction-записи, bot-активність та загальний стан системи.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" id="refresh-button">Оновити стан</button>
+          <a class="button button-secondary" href="/docs">Відкрити Swagger</a>
+          <a class="button button-secondary" href="/training">Training Lab</a>
+        </div>
+      </article>
+
+      <aside class="panel">
+        <div class="health-line">
+          <div>
+            <div class="small-note">Живий стан</div>
+            <div id="model-state">Перевірка API…</div>
+          </div>
+          <div class="status-pill" id="health-pill">offline</div>
+        </div>
+        <div>
+          <div class="small-note">Classifier path</div>
+          <div class="mono" id="classifier-path">-</div>
+        </div>
+        <div>
+          <div class="small-note">Colorizer path</div>
+          <div class="mono" id="colorizer-path">-</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="metric-grid">
+      <article class="metrics-card">
+        <div class="metric-label">Predictions</div>
+        <div class="metric-value" id="total-predictions">0</div>
+      </article>
+      <article class="metrics-card">
+        <div class="metric-label">Bot Activity</div>
+        <div class="metric-value" id="total-activity">0</div>
+      </article>
+      <article class="metrics-card">
+        <div class="metric-label">Benchmarks</div>
+        <div class="metric-value" id="total-benchmarks">0</div>
+      </article>
+      <article class="metrics-card">
+        <div class="metric-label">Users</div>
+        <div class="metric-value" id="total-users">0</div>
+      </article>
+    </section>
+
+    <section class="main-grid">
+      <article class="playground-card">
+        <div class="card-title">
+          <div>
+            <h2>Image Playground</h2>
+            <p>Тестуйте API для inference прямо з браузера.</p>
+          </div>
+        </div>
+
+        <div class="drop-zone" id="drop-zone">
+          <div>
+            <div id="drop-message">Перетягніть сюди зображення або клацніть для вибору</div>
+            <input type="file" id="file-input" accept="image/*" hidden />
+            <img id="preview" alt="Preview" hidden />
+          </div>
+        </div>
+
+        <div class="operation-row">
+          <button class="primary" id="classify-button">Класифікувати</button>
+          <button class="secondary" id="colorize-button">Колоризувати</button>
+          <button class="secondary" id="stylize-button">&#x1F3A8; Фільтри</button>
+          <button class="secondary" id="neural-style-button">Стилізація</button>
+        </div>
+
+        <div class="style-row" id="classifier-model-row" style="display:none">
+          <span class="small-note" style="align-self:center;white-space:nowrap">Модель:</span>
+          <div id="classifier-chips"></div>
+        </div>
+
+        <div class="style-row" id="colorizer-model-row" style="display:none">
+          <span class="small-note" style="align-self:center;white-space:nowrap">Модель:</span>
+          <div id="colorizer-chips"></div>
+        </div>
+
+        <div class="style-row" id="algo-style-row" style="display:none">
+          <div class="style-chip active" data-style="vangogh">Van Gogh</div>
+          <div class="style-chip" data-style="bw">Black & White</div>
+          <div class="style-chip" data-style="hokusai">Hokusai</div>
+          <div class="style-chip" data-style="cartoon">Cartoon</div>
+        </div>
+
+        <div class="style-row" id="neural-style-row" style="display:none">
+          <div class="style-chip active" data-nstyle="starry_night">&#x1F303; Starry Night</div>
+          <div class="style-chip" data-nstyle="great_wave">&#x1F30A; Great Wave</div>
+          <div class="style-chip" data-nstyle="the_scream">&#x1F62D; The Scream</div>
+          <div class="style-chip" data-nstyle="composition_viii">&#x1F3A8; Composition VIII</div>
+        </div>
+        <div id="nst-hint" style="display:none">
+          <p class="small-note">&#x26A0;&#xFE0F; Стилізація займає 5–15 с на GPU. Перший запит завантажує VGG19 (~550 MB).</p>
+        </div>
+
+        <section class="result-section" id="result-section" hidden>
+          <div class="result-grid">
+            <div class="image-panel">
+              <div class="small-note">Оригінал</div>
+              <img id="original-image" alt="Original image" />
+            </div>
+            <div class="image-panel">
+              <div class="small-note">Результат</div>
+              <img id="result-image" alt="Result image" />
+            </div>
+          </div>
+          <div class="result-meta" id="result-meta"></div>
+          <div class="score-list" id="score-list"></div>
+        </section>
+      </article>
+
+      <aside class="stream-card">
+        <section>
+          <div class="card-title">
+            <div>
+              <h3>Benchmark Trigger</h3>
+              <p>Запускайте фоновий benchmark і одразу дивіться збережені результати.</p>
+            </div>
+          </div>
+          <div class="inline-form">
+            <select id="benchmark-dataset" class="button-secondary">
+              <option value="breast_cancer">breast_cancer</option>
+              <option value="heart_disease">heart_disease</option>
+            </select>
+            <input type="number" id="benchmark-epochs" value="100" min="1" />
+            <button class="primary" id="benchmark-button">Запустити</button>
+          </div>
+          <div class="small-note" id="benchmark-output">Очікує запуску.</div>
+        </section>
+
+        <section>
+          <div class="card-title">
+            <div>
+              <h3>Recent Predictions</h3>
+              <p>Останні inference-запити збережені в БД.</p>
+            </div>
+          </div>
+          <div class="prediction-list" id="prediction-list"></div>
+        </section>
+      </aside>
+    </section>
+
+    <section class="main-grid">
+      <article class="table-card">
+        <div class="card-title">
+          <div>
+            <h3>Benchmark History</h3>
+            <p>Найсвіжіші benchmark runs з ключовими метриками.</p>
+          </div>
+        </div>
+        <div class="chart-panel">
+          <canvas id="benchmark-chart" height="220"></canvas>
+        </div>
+        <div class="benchmark-list" id="benchmark-list"></div>
+      </article>
+
+      <article class="table-card">
+        <div class="card-title">
+          <div>
+            <h3>Bot Activity Stream</h3>
+            <p>Останні команди та медіа-події з Telegram-бота.</p>
+          </div>
+        </div>
+        <div class="log-list" id="activity-list"></div>
+      </article>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

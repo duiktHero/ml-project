@@ -1,0 +1,11 @@
+{
+  "status": "running",
+  "stage": "train:cifar10",
+  "epoch": 14,
+  "total_epochs": 30,
+  "elapsed_seconds": 224.87,
+  "epoch_seconds": null,
+  "eta_seconds": 293.82,
+  "metrics": {},
+  "updated_at": 1774105114.1348238
+}

@@ -1,0 +1,181 @@
+2026-03-21 15:56:00.975903: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-21 15:56:03.696914: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\backend.py:873: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+Loaded Food-101 with 101 classes at 224x224
+Downloading data from https://storage.googleapis.com/keras-applications/efficientnetb0_notop.h5
+
+    8192/16705208 [..............................] - ETA: 0s
+   49152/16705208 [..............................] - ETA: 43s
+   81920/16705208 [..............................] - ETA: 48s
+  147456/16705208 [..............................] - ETA: 32s
+  212992/16705208 [..............................] - ETA: 26s
+  278528/16705208 [..............................] - ETA: 23s
+  393216/16705208 [..............................] - ETA: 18s
+  557056/16705208 [>.............................] - ETA: 14s
+  737280/16705208 [>.............................] - ETA: 12s
+ 1015808/16705208 [>.............................] - ETA: 9s 
+ 1327104/16705208 [=>............................] - ETA: 7s
+ 1589248/16705208 [=>............................] - ETA: 6s
+ 2220032/16705208 [==>...........................] - ETA: 4s
+ 2498560/16705208 [===>..........................] - ETA: 4s
+ 3399680/16705208 [=====>........................] - ETA: 3s
+ 3694592/16705208 [=====>........................] - ETA: 3s
+ 5111808/16705208 [========>.....................] - ETA: 2s
+ 5586944/16705208 [=========>....................] - ETA: 2s
+ 7421952/16705208 [============>.................] - ETA: 1s
+ 7864320/16705208 [=============>................] - ETA: 1s
+ 9961472/16705208 [================>.............] - ETA: 0s
+11436032/16705208 [===================>..........] - ETA: 0s
+13680640/16705208 [=======================>......] - ETA: 0s
+15810560/16705208 [===========================>..] - ETA: 0s
+16705208/16705208 [==============================] - 1s 0us/step
+Epoch 1/20
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+
+   1/2013 [..............................] - ETA: 1:55:31 - loss: 4.7379 - accuracy: 0.0000e+00
+   2/2013 [..............................] - ETA: 5:39 - loss: 4.7771 - accuracy: 0.0156       
+   3/2013 [..............................] - ETA: 5:36 - loss: 4.7736 - accuracy: 0.0104
+   4/2013 [..............................] - ETA: 5:36 - loss: 4.7970 - accuracy: 0.0156
+   5/2013 [..............................] - ETA: 5:35 - loss: 4.7573 - accuracy: 0.0188
+   6/2013 [..............................] - ETA: 5:41 - loss: 4.7557 - accuracy: 0.0260
+   7/2013 [..............................] - ETA: 5:44 - loss: 4.7430 - accuracy: 0.0357
+   8/2013 [..............................] - ETA: 5:48 - loss: 4.6947 - accuracy: 0.0430
+   9/2013 [..............................] - ETA: 5:47 - loss: 4.7058 - accuracy: 0.0417
+  10/2013 [..............................] - ETA: 5:46 - loss: 4.7131 - accuracy: 0.0375
+  11/2013 [..............................] - ETA: 5:44 - loss: 4.7132 - accuracy: 0.0369
+  12/2013 [..............................] - ETA: 5:43 - loss: 4.6917 - accuracy: 0.0339
+  13/2013 [..............................] - ETA: 5:42 - loss: 4.6907 - accuracy: 0.0312
+  14/2013 [..............................] - ETA: 5:43 - loss: 4.6952 - accuracy: 0.0290
+  15/2013 [..............................] - ETA: 5:43 - loss: 4.6845 - accuracy: 0.0292
+  16/2013 [..............................] - ETA: 5:43 - loss: 4.6763 - accuracy: 0.0293
+  17/2013 [..............................] - ETA: 5:42 - loss: 4.6790 - accuracy: 0.0276
+  18/2013 [..............................] - ETA: 5:40 - loss: 4.6810 - accuracy: 0.0260
+  19/2013 [..............................] - ETA: 5:40 - loss: 4.6755 - accuracy: 0.0263
+  20/2013 [..............................] - ETA: 5:39 - loss: 4.6762 - accuracy: 0.0266
+  21/2013 [..............................] - ETA: 5:38 - loss: 4.6787 - accuracy: 0.0253
+  22/2013 [..............................] - ETA: 5:37 - loss: 4.6564 - accuracy: 0.0284
+  23/2013 [..............................] - ETA: 5:35 - loss: 4.6580 - accuracy: 0.0299
+  24/2013 [..............................] - ETA: 5:35 - loss: 4.6396 - accuracy: 0.0339
+  25/2013 [..............................] - ETA: 5:34 - loss: 4.6327 - accuracy: 0.0338
+  26/2013 [..............................] - ETA: 5:32 - loss: 4.6248 - accuracy: 0.0325
+  27/2013 [..............................] - ETA: 5:30 - loss: 4.6217 - accuracy: 0.0324
+  28/2013 [..............................] - ETA: 5:30 - loss: 4.6102 - accuracy: 0.0346
+  29/2013 [..............................] - ETA: 5:29 - loss: 4.6007 - accuracy: 0.0366
+  30/2013 [..............................] - ETA: 5:28 - loss: 4.5948 - accuracy: 0.0385
+  31/2013 [..............................] - ETA: 5:28 - loss: 4.5950 - accuracy: 0.0373
+  32/2013 [..............................] - ETA: 5:27 - loss: 4.5898 - accuracy: 0.0391
+  33/2013 [..............................] - ETA: 5:26 - loss: 4.5783 - accuracy: 0.0426
+  34/2013 [..............................] - ETA: 5:24 - loss: 4.5685 - accuracy: 0.0441
+  35/2013 [..............................] - ETA: 5:23 - loss: 4.5568 - accuracy: 0.0446
+  36/2013 [..............................] - ETA: 5:23 - loss: 4.5476 - accuracy: 0.0443
+  37/2013 [..............................] - ETA: 5:22 - loss: 4.5441 - accuracy: 0.0448
+  38/2013 [..............................] - ETA: 5:21 - loss: 4.5354 - accuracy: 0.0461
+  39/2013 [..............................] - ETA: 5:20 - loss: 4.5223 - accuracy: 0.0489
+  40/2013 [..............................] - ETA: 5:19 - loss: 4.5132 - accuracy: 0.0508
+  41/2013 [..............................] - ETA: 5:19 - loss: 4.5058 - accuracy: 0.0511
+  42/2013 [..............................] - ETA: 5:19 - loss: 4.4998 - accuracy: 0.0521
+  43/2013 [..............................] - ETA: 5:18 - loss: 4.4895 - accuracy: 0.0538
+  44/2013 [..............................] - ETA: 5:17 - loss: 4.4827 - accuracy: 0.0561
+  45/2013 [..............................] - ETA: 5:17 - loss: 4.4740 - accuracy: 0.0562
+  46/2013 [..............................] - ETA: 5:16 - loss: 4.4665 - accuracy: 0.0577
+  47/2013 [..............................] - ETA: 5:16 - loss: 4.4608 - accuracy: 0.0578
+  48/2013 [..............................] - ETA: 5:15 - loss: 4.4538 - accuracy: 0.0579
+  49/2013 [..............................] - ETA: 5:15 - loss: 4.4471 - accuracy: 0.0587
+  50/2013 [..............................] - ETA: 5:14 - loss: 4.4397 - accuracy: 0.0587
+  51/2013 [..............................] - ETA: 5:14 - loss: 4.4326 - accuracy: 0.0594
+  52/2013 [..............................] - ETA: 5:13 - loss: 4.4289 - accuracy: 0.0613
+  53/2013 [..............................] - ETA: 5:13 - loss: 4.4204 - accuracy: 0.0625
+  54/2013 [..............................] - ETA: 5:13 - loss: 4.4114 - accuracy: 0.0631
+  55/2013 [..............................] - ETA: 5:13 - loss: 4.4073 - accuracy: 0.0636
+  56/2013 [..............................] - ETA: 5:12 - loss: 4.3966 - accuracy: 0.0675
+  57/2013 [..............................] - ETA: 5:12 - loss: 4.3909 - accuracy: 0.0685
+  58/2013 [..............................] - ETA: 5:12 - loss: 4.3845 - accuracy: 0.0684
+  59/2013 [..............................] - ETA: 5:12 - loss: 4.3758 - accuracy: 0.0699
+  60/2013 [..............................] - ETA: 5:12 - loss: 4.3668 - accuracy: 0.0729
+  61/2013 [..............................] - ETA: 5:12 - loss: 4.3615 - accuracy: 0.0743
+  62/2013 [..............................] - ETA: 5:12 - loss: 4.3508 - accuracy: 0.0766
+  63/2013 [..............................] - ETA: 5:12 - loss: 4.3423 - accuracy: 0.0784
+  64/2013 [..............................] - ETA: 5:11 - loss: 4.3300 - accuracy: 0.0815
+  65/2013 [..............................] - ETA: 5:11 - loss: 4.3234 - accuracy: 0.0812
+  66/2013 [..............................] - ETA: 5:11 - loss: 4.3160 - accuracy: 0.0824
+  67/2013 [..............................] - ETA: 5:11 - loss: 4.3071 - accuracy: 0.0835
+  68/2013 [>.............................] - ETA: 5:11 - loss: 4.3006 - accuracy: 0.0836Traceback (most recent call last):
+  File "D:\University\AI\Yulia\ml-sandbox\ml\image_model\train.py", line 280, in <module>
+    main()
+  File "D:\University\AI\Yulia\ml-sandbox\ml\image_model\train.py", line 246, in main
+    history = model.fit(
+              ^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\utils\traceback_utils.py", line 65, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\engine\training.py", line 1807, in fit
+    tmp_logs = self.train_function(iterator)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\util\traceback_utils.py", line 150, in error_handler
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 832, in __call__
+    result = self._call(*args, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\polymorphic_function.py", line 868, in _call
+    return tracing_compilation.call_function(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\tracing_compilation.py", line 139, in call_function
+    return function._call_flat(  # pylint: disable=protected-access
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\concrete_function.py", line 1323, in _call_flat
+    return self._inference_function.call_preflattened(args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 216, in call_preflattened
+    flat_outputs = self.call_flat(*args)
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\polymorphic_function\atomic_function.py", line 251, in call_flat
+    outputs = self._bound_context.call_function(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\context.py", line 1486, in call_function
+    outputs = execute.execute(
+              ^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\tensorflow\python\eager\execute.py", line 53, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Running: D:\University\AI\Yulia\ml-sandbox\.venv\Scripts\python.exe ml/image_model/train.py --dataset food101 --epochs 20 --batch-size 32 --image-size 224
+Traceback (most recent call last):
+  File "D:\University\AI\Yulia\ml-sandbox\scripts\run_local.py", line 124, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\scripts\run_local.py", line 92, in main
+    return run_command(command)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Yulia\ml-sandbox\scripts\run_local.py", line 28, in run_command
+    completed = subprocess.run(args, cwd=ROOT, env=env)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 548, in run
+    stdout, stderr = process.communicate(input, timeout=timeout)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1197, in communicate
+    self.wait()
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1260, in wait
+    return self._wait(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1541, in _wait
+    result = _winapi.WaitForSingleObject(self._handle,
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,5 @@
+Running: /usr/bin/python3.11 -m ml.image_model.train --dataset cifar10 --epochs 30 --mixed-precision auto
+en runpy>", line 88, in _run_code
+  File "/mnt/d/University/AI/Yulia/ml-sandbox/ml/image_model/train.py", line 15, in <module>
+    import matplotlib
+ModuleNotFoundError: No module named 'matplotlib'

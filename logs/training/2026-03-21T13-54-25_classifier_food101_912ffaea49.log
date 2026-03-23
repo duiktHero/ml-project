@@ -1,0 +1,15 @@
+2026-03-21 15:54:27.428150: I tensorflow/core/util/port.cc:113] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+WARNING:tensorflow:From D:\University\AI\Yulia\ml-sandbox\.venv\Lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+2026-03-21 15:54:31.537412: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: SSE SSE2 SSE3 SSE4.1 SSE4.2 AVX2 AVX512F AVX512_VNNI AVX512_BF16 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Traceback (most recent call last):
+  File "D:\University\AI\Yulia\ml-sandbox\ml\image_model\train.py", line 280, in <module>
+    main()
+  File "D:\University\AI\Yulia\ml-sandbox\ml\image_model\train.py", line 238, in main
+    print(f"Loaded Food-101 with {len(labels)} classes at {image_size}\xd7{image_size}")
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1251.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\xd7' in position 39: character maps to <undefined>
+Running: D:\University\AI\Yulia\ml-sandbox\.venv\Scripts\python.exe ml/image_model/train.py --dataset food101 --epochs 20 --batch-size 32 --image-size 224

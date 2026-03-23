@@ -1,0 +1,1390 @@
+2026-03-23 13:06:35,027 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:06:35,028 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:06:40,173 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:07:02,605 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /start
+2026-03-23 13:07:03,085 | INFO     | aiogram.event | Update id=454479230 is handled. Duration 483 ms by bot id=8621688645
+2026-03-23 13:16:48,512 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:16:48,765 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:16:56,104 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:16:56,104 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:16:56,297 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:17:43,007 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /start
+2026-03-23 13:17:43,431 | INFO     | aiogram.event | Update id=454479231 is handled. Duration 421 ms by bot id=8621688645
+2026-03-23 13:17:45,783 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /classify
+2026-03-23 13:17:45,864 | INFO     | aiogram.event | Update id=454479232 is handled. Duration 77 ms by bot id=8621688645
+2026-03-23 13:17:52,839 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:17:55,036 | INFO     | aiogram.event | Update id=454479233 is handled. Duration 2203 ms by bot id=8621688645
+2026-03-23 13:18:26,717 | INFO     | aiogram.event | Update id=454479234 is not handled. Duration 28594 ms by bot id=8621688645
+2026-03-23 13:18:26,717 | ERROR    | aiogram.event | Cause exception while process update id=454479234 by bot id=8621688645
+TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\fsm\storage\memory.py", line 56, in lock
+    yield
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\routers\classify.py", line 84, in process_classifier_model_choice
+    await callback.message.answer(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 178, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+2026-03-23 13:19:37,266 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:19:37,519 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:19:43,680 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:19:43,683 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:19:43,843 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:19:52,215 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /classify
+2026-03-23 13:19:52,509 | INFO     | aiogram.event | Update id=454479235 is handled. Duration 296 ms by bot id=8621688645
+2026-03-23 13:19:55,951 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:19:58,150 | INFO     | aiogram.event | Update id=454479236 is handled. Duration 2203 ms by bot id=8621688645
+2026-03-23 13:20:03,722 | INFO     | aiogram.event | Update id=454479237 is not handled. Duration 2782 ms by bot id=8621688645
+2026-03-23 13:20:03,723 | ERROR    | aiogram.event | Cause exception while process update id=454479237 by bot id=8621688645
+TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\fsm\storage\memory.py", line 56, in lock
+    yield
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\routers\classify.py", line 89, in process_classifier_model_choice
+    await callback.message.answer(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 178, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+2026-03-23 13:20:18,596 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:20:18,849 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:20:26,035 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:20:26,035 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:20:26,196 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:20:27,201 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /start
+2026-03-23 13:20:27,473 | INFO     | aiogram.event | Update id=454479238 is handled. Duration 282 ms by bot id=8621688645
+2026-03-23 13:20:28,722 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /classify
+2026-03-23 13:20:28,801 | INFO     | aiogram.event | Update id=454479239 is handled. Duration 77 ms by bot id=8621688645
+2026-03-23 13:20:31,886 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:20:34,007 | INFO     | aiogram.event | Update id=454479240 is handled. Duration 2125 ms by bot id=8621688645
+2026-03-23 13:20:39,520 | INFO     | aiogram.event | Update id=454479241 is not handled. Duration 3921 ms by bot id=8621688645
+2026-03-23 13:20:39,520 | ERROR    | aiogram.event | Cause exception while process update id=454479241 by bot id=8621688645
+TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gonch\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 222, in __aexit__
+    await self.gen.athrow(typ, value, traceback)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\fsm\storage\memory.py", line 56, in lock
+    yield
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 41, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 156, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 128, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 123, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 148, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\routers\classify.py", line 89, in process_classifier_model_choice
+    await callback.message.answer(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\bot.py", line 492, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\aiohttp.py", line 178, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: BUTTON_DATA_INVALID
+2026-03-23 13:22:46,636 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:22:46,901 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:22:52,686 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:22:52,686 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:22:52,841 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:22:55,859 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /start
+2026-03-23 13:22:56,243 | INFO     | aiogram.event | Update id=454479242 is handled. Duration 375 ms by bot id=8621688645
+2026-03-23 13:22:57,524 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /classify
+2026-03-23 13:22:57,749 | INFO     | aiogram.event | Update id=454479243 is handled. Duration 233 ms by bot id=8621688645
+2026-03-23 13:23:01,107 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:23:03,374 | INFO     | aiogram.event | Update id=454479244 is handled. Duration 2280 ms by bot id=8621688645
+2026-03-23 13:23:07,800 | INFO     | aiogram.event | Update id=454479245 is handled. Duration 2687 ms by bot id=8621688645
+2026-03-23 13:23:12,913 | INFO     | aiogram.event | Update id=454479246 is handled. Duration 140 ms by bot id=8621688645
+2026-03-23 13:23:18,817 | INFO     | aiogram.event | Update id=454479247 is handled. Duration 3328 ms by bot id=8621688645
+2026-03-23 13:24:36,031 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /classify
+2026-03-23 13:24:36,252 | INFO     | aiogram.event | Update id=454479248 is handled. Duration 218 ms by bot id=8621688645
+2026-03-23 13:24:39,735 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:24:39,806 | INFO     | aiogram.event | Update id=454479249 is handled. Duration 62 ms by bot id=8621688645
+2026-03-23 13:24:41,216 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /start
+2026-03-23 13:24:41,310 | INFO     | aiogram.event | Update id=454479250 is handled. Duration 93 ms by bot id=8621688645
+2026-03-23 13:24:42,624 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:24:42,730 | INFO     | aiogram.event | Update id=454479251 is handled. Duration 110 ms by bot id=8621688645
+2026-03-23 13:24:51,173 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:24:53,285 | INFO     | aiogram.event | Update id=454479252 is handled. Duration 2109 ms by bot id=8621688645
+2026-03-23 13:24:54,472 | INFO     | aiogram.event | Update id=454479253 is handled. Duration 110 ms by bot id=8621688645
+2026-03-23 13:24:57,692 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:24:57,776 | INFO     | aiogram.event | Update id=454479254 is handled. Duration 78 ms by bot id=8621688645
+2026-03-23 13:25:15,739 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:25:17,977 | INFO     | aiogram.event | Update id=454479255 is handled. Duration 2235 ms by bot id=8621688645
+2026-03-23 13:25:26,874 | INFO     | aiogram.event | Update id=454479256 is handled. Duration 3343 ms by bot id=8621688645
+2026-03-23 13:26:45,317 | INFO     | bot.middlewares.logging | [576510338] @Grothers → /start
+2026-03-23 13:26:45,519 | INFO     | aiogram.event | Update id=454479257 is handled. Duration 203 ms by bot id=8621688645
+2026-03-23 13:26:55,160 | INFO     | bot.middlewares.logging | [576510338] @Grothers → /admin
+2026-03-23 13:26:55,511 | INFO     | aiogram.event | Update id=454479258 is handled. Duration 343 ms by bot id=8621688645
+2026-03-23 13:26:57,001 | INFO     | bot.middlewares.logging | [576510338] @Grothers → /classify
+2026-03-23 13:26:57,070 | INFO     | aiogram.event | Update id=454479259 is handled. Duration 62 ms by bot id=8621688645
+2026-03-23 13:27:06,341 | INFO     | bot.middlewares.logging | [576510338] @Grothers → <media>
+2026-03-23 13:27:08,445 | INFO     | aiogram.event | Update id=454479260 is handled. Duration 2108 ms by bot id=8621688645
+2026-03-23 13:27:14,123 | INFO     | aiogram.event | Update id=454479261 is handled. Duration 2733 ms by bot id=8621688645
+2026-03-23 13:27:17,293 | INFO     | aiogram.event | Update id=454479262 is handled. Duration 156 ms by bot id=8621688645
+2026-03-23 13:27:22,901 | INFO     | bot.middlewares.logging | [576510338] @Grothers → <media>
+2026-03-23 13:27:25,073 | INFO     | aiogram.event | Update id=454479263 is handled. Duration 2171 ms by bot id=8621688645
+2026-03-23 13:27:31,227 | INFO     | aiogram.event | Update id=454479264 is handled. Duration 2469 ms by bot id=8621688645
+2026-03-23 13:32:15,935 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /results
+2026-03-23 13:32:18,187 | INFO     | aiogram.event | Update id=454479265 is handled. Duration 2280 ms by bot id=8621688645
+2026-03-23 13:32:24,081 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /stylize
+2026-03-23 13:32:24,182 | INFO     | aiogram.event | Update id=454479266 is handled. Duration 109 ms by bot id=8621688645
+2026-03-23 13:32:29,714 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:32:29,792 | INFO     | aiogram.event | Update id=454479267 is handled. Duration 78 ms by bot id=8621688645
+2026-03-23 13:32:38,345 | INFO     | aiogram.event | Update id=454479268 is handled. Duration 3532 ms by bot id=8621688645
+2026-03-23 13:32:48,611 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:32:48,698 | INFO     | aiogram.event | Update id=454479269 is handled. Duration 92 ms by bot id=8621688645
+2026-03-23 13:32:51,681 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:32:53,797 | INFO     | aiogram.event | Update id=454479270 is handled. Duration 2125 ms by bot id=8621688645
+2026-03-23 13:33:01,118 | INFO     | aiogram.event | Update id=454479271 is handled. Duration 2671 ms by bot id=8621688645
+2026-03-23 13:34:45,507 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:34:45,690 | INFO     | aiogram.event | Update id=454479272 is handled. Duration 187 ms by bot id=8621688645
+2026-03-23 13:34:48,635 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:34:50,760 | INFO     | aiogram.event | Update id=454479273 is handled. Duration 2125 ms by bot id=8621688645
+2026-03-23 13:34:54,886 | INFO     | aiogram.event | Update id=454479274 is handled. Duration 2671 ms by bot id=8621688645
+2026-03-23 13:35:02,641 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:35:02,720 | INFO     | aiogram.event | Update id=454479275 is handled. Duration 94 ms by bot id=8621688645
+2026-03-23 13:35:06,840 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:35:07,082 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:35:13,215 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:35:13,216 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:35:13,365 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:35:14,517 | INFO     | aiogram.event | Update id=454479276 is not handled. Duration 0 ms by bot id=8621688645
+2026-03-23 13:35:20,842 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → /colorize
+2026-03-23 13:35:21,228 | INFO     | aiogram.event | Update id=454479277 is handled. Duration 391 ms by bot id=8621688645
+2026-03-23 13:35:23,183 | INFO     | bot.middlewares.logging | [487725726] @CptMcTawish → <media>
+2026-03-23 13:35:25,733 | INFO     | aiogram.event | Update id=454479278 is handled. Duration 2562 ms by bot id=8621688645
+2026-03-23 13:35:41,540 | INFO     | aiogram.event | Update id=454479279 is handled. Duration 14281 ms by bot id=8621688645
+2026-03-23 13:38:20,872 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:38:21,127 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:38:22,974 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:38:22,975 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:38:23,115 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:57:27,663 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 13:57:27,919 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 13:57:29,763 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 13:57:29,763 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 13:57:29,898 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 14:05:48,465 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /start
+2026-03-23 14:05:48,518 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 35, in __call__
+    await log_activity(session, db_user.id, text[:128])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 30, in get_or_create_user
+    user = User(
+         ^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:05:48,731 | INFO     | aiogram.event | Update id=454479280 is handled. Duration 266 ms by bot id=8621688645
+2026-03-23 14:09:01,726 | INFO     | aiogram.dispatcher | Polling stopped
+2026-03-23 14:09:01,986 | INFO     | aiogram.dispatcher | Polling stopped for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 14:09:04,053 | INFO     | __main__ | Bot starting — polling…
+2026-03-23 14:09:04,054 | INFO     | aiogram.dispatcher | Start polling
+2026-03-23 14:09:04,237 | INFO     | aiogram.dispatcher | Run polling for bot @multifunctionalbotbotbot id=8621688645 - 'Мультифункціональний бот'
+2026-03-23 14:29:14,144 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /classify
+2026-03-23 14:29:14,304 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:29:14,472 | INFO     | aiogram.event | Update id=454479281 is handled. Duration 328 ms by bot id=8621688645
+2026-03-23 14:31:33,211 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /colorize
+2026-03-23 14:31:33,213 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:31:33,413 | INFO     | aiogram.event | Update id=454479282 is handled. Duration 203 ms by bot id=8621688645
+2026-03-23 14:31:35,067 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /start
+2026-03-23 14:31:35,069 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:31:35,148 | INFO     | aiogram.event | Update id=454479283 is handled. Duration 78 ms by bot id=8621688645
+2026-03-23 14:31:36,346 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /colorize
+2026-03-23 14:31:36,348 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:31:36,434 | INFO     | aiogram.event | Update id=454479284 is handled. Duration 77 ms by bot id=8621688645
+2026-03-23 14:33:34,506 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → <media>
+2026-03-23 14:33:34,508 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:33:34,673 | INFO     | aiogram.event | Update id=454479285 is handled. Duration 171 ms by bot id=8621688645
+2026-03-23 14:33:39,153 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /start
+2026-03-23 14:33:39,155 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:33:39,223 | INFO     | aiogram.event | Update id=454479286 is handled. Duration 78 ms by bot id=8621688645
+2026-03-23 14:33:40,619 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → /colorize
+2026-03-23 14:33:40,620 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:33:40,688 | INFO     | aiogram.event | Update id=454479287 is handled. Duration 78 ms by bot id=8621688645
+2026-03-23 14:33:46,681 | INFO     | bot.middlewares.logging | [7486798918] @mavrodiiimmm → <media>
+2026-03-23 14:33:46,682 | ERROR    | bot.middlewares.logging | DB logging error (non-fatal)
+Traceback (most recent call last):
+  File "asyncpg\protocol\prepared_stmt.pyx", line 175, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+  File "asyncpg\protocol\codecs/base.pyx", line 227, in asyncpg.protocol.protocol.Codec.encode
+  File "asyncpg\protocol\codecs/base.pyx", line 129, in asyncpg.protocol.protocol.Codec.encode_scalar
+  File "asyncpg\pgproto\./codecs/int.pyx", line 60, in asyncpg.pgproto.pgproto.int4_encode
+OverflowError: value out of int32 range
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 538, in _prepare_and_execute
+    self._rows = await prepared_stmt.fetch(*parameters)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 241, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\asyncpg\prepared_stmt.py", line 230, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\protocol\protocol.pyx", line 186, in bind_execute
+  File "asyncpg\protocol\prepared_stmt.pyx", line 204, in asyncpg.protocol.protocol.PreparedStatementState._encode_bind_msg
+asyncpg.exceptions.DataError: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.Error: <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\middlewares\logging.py", line 32, in __call__
+    db_user = await get_or_create_user(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\bot\db.py", line 25, in get_or_create_user
+    result = await session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 452, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 197, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2306, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2191, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 293, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1408, in execute
+    return meth(
+           ^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 513, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1630, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1839, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1979, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2335, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1960, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 924, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 572, in execute
+    self._adapt_connection.await_(
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 127, in await_only
+    return current.driver.switch(awaitable)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 192, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 550, in _prepare_and_execute
+    self._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 501, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "D:\University\AI\Dmytro\ml-sandbox\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 789, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.DBAPIError: (sqlalchemy.dialects.postgresql.asyncpg.Error) <class 'asyncpg.exceptions.DataError'>: invalid input for query argument $1: 7486798918 (value out of int32 range)
+[SQL: SELECT users.id, users.telegram_id, users.username, users.first_name, users.created_at 
+FROM users 
+WHERE users.telegram_id = $1::INTEGER]
+[parameters: (7486798918,)]
+(Background on this error at: https://sqlalche.me/e/20/dbapi)
+2026-03-23 14:33:48,789 | INFO     | aiogram.event | Update id=454479288 is handled. Duration 2109 ms by bot id=8621688645
+2026-03-23 14:33:59,544 | INFO     | aiogram.event | Update id=454479289 is handled. Duration 2390 ms by bot id=8621688645
+2026-03-23 14:34:01,403 | INFO     | aiogram.event | Update id=454479290 is handled. Duration 109 ms by bot id=8621688645
+2026-03-23 14:34:11,899 | INFO     | aiogram.event | Update id=454479291 is handled. Duration 2421 ms by bot id=8621688645

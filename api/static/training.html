@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Sandbox Training Lab</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <section class="hero">
+      <article class="hero-card">
+        <div class="eyebrow">Training Lab</div>
+        <h1>Керування навчанням моделей з браузера</h1>
+        <p>
+          Запускайте presets для classifier і colorizer у фоновому режимі,
+          переглядайте статус задач і знаходьте лог-файли без перемикання в термінал.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-secondary" href="/">Повернутися в Control Room</a>
+          <button class="primary" id="training-refresh-button">Оновити статуси</button>
+        </div>
+      </article>
+
+      <aside class="panel">
+        <div class="health-line">
+          <div>
+            <div class="small-note">Training API</div>
+            <div id="training-api-state">Перевірка…</div>
+          </div>
+          <div class="status-pill" id="training-api-pill">offline</div>
+        </div>
+        <div>
+          <div class="small-note">Поточний runner</div>
+          <div class="mono" id="training-python-note">Будe визначено після першого запиту.</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="main-grid">
+      <article class="table-card">
+        <div class="card-title">
+          <div>
+            <h2>Training Presets</h2>
+            <p>Готові сценарії для CPU/GPU запуску з уже підібраними параметрами.</p>
+          </div>
+        </div>
+        <div class="preset-grid" id="preset-grid"></div>
+      </article>
+
+      <aside class="stream-card">
+        <section>
+          <div class="card-title">
+            <div>
+              <h3>Jobs</h3>
+              <p>Стан усіх фонових запусків навчання.</p>
+            </div>
+          </div>
+          <div class="job-list" id="job-list"></div>
+        </section>
+      </aside>
+    </section>
+  </div>
+
+  <script src="/static/training.js"></script>
+</body>
+</html>
