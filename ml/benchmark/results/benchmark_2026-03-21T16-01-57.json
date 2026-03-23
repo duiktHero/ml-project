@@ -1,0 +1,61 @@
+{
+  "dataset": "breast_cancer",
+  "date": "2026-03-21T16:01:57.072052",
+  "results": [
+    {
+      "model": "LogisticRegression",
+      "framework": "sklearn",
+      "accuracy": 0.9737,
+      "f1_score": 0.9793,
+      "train_time_sec": 1.896,
+      "inference_time_ms": 0.002,
+      "best_params": {
+        "model__C": 0.1,
+        "model__max_iter": 1000
+      }
+    },
+    {
+      "model": "RandomForestClassifier",
+      "framework": "sklearn",
+      "accuracy": 0.9561,
+      "f1_score": 0.9655,
+      "train_time_sec": 0.365,
+      "inference_time_ms": 0.013,
+      "best_params": {
+        "model__n_estimators": 100
+      }
+    },
+    {
+      "model": "SVC",
+      "framework": "sklearn",
+      "accuracy": 0.9825,
+      "f1_score": 0.9861,
+      "train_time_sec": 0.037,
+      "inference_time_ms": 0.01,
+      "best_params": {
+        "model__C": 1,
+        "model__gamma": "scale"
+      }
+    },
+    {
+      "model": "GradientBoostingClassifier",
+      "framework": "sklearn",
+      "accuracy": 0.9561,
+      "f1_score": 0.966,
+      "train_time_sec": 0.633,
+      "inference_time_ms": 0.003,
+      "best_params": {
+        "model__learning_rate": 0.1,
+        "model__n_estimators": 100
+      }
+    },
+    {
+      "model": "TabularNet",
+      "framework": "pytorch",
+      "accuracy": 0.9649,
+      "f1_score": 0.9726,
+      "train_time_sec": 0.08,
+      "inference_time_ms": 0.004
+    }
+  ]
+}

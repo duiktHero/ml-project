@@ -1,0 +1,61 @@
+{
+  "dataset": "heart_disease",
+  "date": "2026-03-22T12:22:08.149736",
+  "results": [
+    {
+      "model": "LogisticRegression",
+      "framework": "sklearn",
+      "accuracy": 0.8667,
+      "f1_score": 0.8462,
+      "train_time_sec": 1.876,
+      "inference_time_ms": 0.004,
+      "best_params": {
+        "model__C": 0.01,
+        "model__max_iter": 1000
+      }
+    },
+    {
+      "model": "RandomForestClassifier",
+      "framework": "sklearn",
+      "accuracy": 0.85,
+      "f1_score": 0.8302,
+      "train_time_sec": 0.247,
+      "inference_time_ms": 0.014,
+      "best_params": {
+        "model__n_estimators": 50
+      }
+    },
+    {
+      "model": "SVC",
+      "framework": "sklearn",
+      "accuracy": 0.85,
+      "f1_score": 0.8302,
+      "train_time_sec": 0.034,
+      "inference_time_ms": 0.008,
+      "best_params": {
+        "model__C": 1,
+        "model__gamma": "scale"
+      }
+    },
+    {
+      "model": "GradientBoostingClassifier",
+      "framework": "sklearn",
+      "accuracy": 0.8,
+      "f1_score": 0.7692,
+      "train_time_sec": 0.13,
+      "inference_time_ms": 0.006,
+      "best_params": {
+        "model__learning_rate": 0.05,
+        "model__n_estimators": 100
+      }
+    },
+    {
+      "model": "TabularNet",
+      "framework": "pytorch",
+      "accuracy": 0.8833,
+      "f1_score": 0.8727,
+      "train_time_sec": 0.17,
+      "inference_time_ms": 0.003
+    }
+  ]
+}
